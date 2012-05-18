@@ -1,0 +1,409 @@
+2012/05/17 12:16:07 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.:JoukkueID" is not defined.' in /Projects/yii/framework/base/CComponent.php:174
+Stack trace:
+#0 /Projects/yii/framework/db/schema/CDbCriteria.php(153): CComponent->__set(':JoukkueID', 1)
+#1 /Projects/yii/framework/db/schema/CDbCommandBuilder.php(462): CDbCriteria->__construct(Array)
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1391): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(64): CActiveRecord->find(Array)
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(42): SiteController->getDropDownListForGroup(1)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 12:16:33 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.JoukkueID" is not defined.' in /Projects/yii/framework/base/CComponent.php:174
+Stack trace:
+#0 /Projects/yii/framework/db/schema/CDbCriteria.php(153): CComponent->__set('JoukkueID', 1)
+#1 /Projects/yii/framework/db/schema/CDbCommandBuilder.php(462): CDbCriteria->__construct(Array)
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1391): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(64): CActiveRecord->find(Array)
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(42): SiteController->getDropDownListForGroup(1)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 12:17:04 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.JoukkueID=" is not defined.' in /Projects/yii/framework/base/CComponent.php:174
+Stack trace:
+#0 /Projects/yii/framework/db/schema/CDbCriteria.php(153): CComponent->__set('JoukkueID=', 1)
+#1 /Projects/yii/framework/db/schema/CDbCommandBuilder.php(462): CDbCriteria->__construct(Array)
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1391): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(64): CActiveRecord->find(Array)
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(42): SiteController->getDropDownListForGroup(1)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 12:17:09 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.:JoukkueID=" is not defined.' in /Projects/yii/framework/base/CComponent.php:174
+Stack trace:
+#0 /Projects/yii/framework/db/schema/CDbCriteria.php(153): CComponent->__set(':JoukkueID=', 1)
+#1 /Projects/yii/framework/db/schema/CDbCommandBuilder.php(462): CDbCriteria->__construct(Array)
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1391): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(64): CActiveRecord->find(Array)
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(42): SiteController->getDropDownListForGroup(1)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 12:24:09 [error] [exception.CException] exception 'CException' with message 'Property "Veikkaaja.Nimimerkki" is not defined.' in /Projects/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Projects/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('Nimimerkki')
+#1 /Projects/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('Nimimerkki')
+#2 /Projects/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(Veikkaaja), 'Nimimerkki')
+#3 /Projects/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(Veikkaaja), 'Nimimerkki', Array)
+#4 /Projects/Euro2012/protected/views/site/leaveBet.php(7): CHtml::activeTextField(Object(Veikkaaja), 'Nimimerkki')
+#5 /Projects/yii/framework/web/CBaseController.php(127): require('/Projects/Euro2...')
+#6 /Projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Projects/Euro2...', Array, true)
+#7 /Projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Projects/Euro2...', Array, true)
+#8 /Projects/yii/framework/web/CController.php(783): CController->renderPartial('leaveBet', Array, true)
+#9 /Projects/Euro2012/protected/controllers/SiteController.php(56): CController->render('leaveBet', Array)
+#10 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#11 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#15 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#16 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Projects/Euro2012/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 12:31:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Projects/Euro2012/protected/controllers/JoukkueControllerController.php:160
+Stack trace:
+#0 /Projects/Euro2012/protected/controllers/JoukkueControllerController.php(54): JoukkueControllerController->loadModel('4')
+#1 [internal function]: JoukkueControllerController->actionView('4')
+#2 /Projects/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(JoukkueControllerController), Array)
+#3 /Projects/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(JoukkueControllerController), Object(ReflectionMethod), Array)
+#4 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /Projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 /Projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /Projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 /Projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /Projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 /Projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#11 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#13 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('joukkueControll...')
+#14 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /Projects/Euro2012/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Euro2012/index.php?r=joukkueController/view&id=4
+---
+2012/05/17 12:31:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Projects/yii/framework/web/CController.php:337
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 /Projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 /Projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /Projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 /Projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /Projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 /Projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#7 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#9 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('joukkueControll...')
+#10 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Projects/Euro2012/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Euro2012/index.php?r=joukkueController/view
+---
+2012/05/17 12:52:28 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "getAllTheBets".' in /Projects/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('getAllTheBets', Array)
+#1 /Projects/Euro2012/protected/controllers/SiteController.php(42): SiteController->getAllTheBets()
+#2 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#3 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#7 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#8 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /Projects/Euro2012/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 12:52:40 [error] [php] Missing argument 1 for SiteController::getAllBets(), called in /Projects/Euro2012/protected/controllers/SiteController.php on line 42 and defined (/Projects/Euro2012/protected/controllers/SiteController.php:79)
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#1 /Projects/yii/framework/web/CController.php(287): SiteController->runAction()
+#2 /Projects/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#3 /Projects/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#4 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#5 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#6 /Projects/Euro2012/index.php(13): CWebApplication->run()
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+in /Projects/Euro2012/protected/controllers/SiteController.php (79)
+in /Projects/Euro2012/protected/controllers/SiteController.php (42)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 12:52:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY VeikkausNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Veikkaus` `t` WHERE ORDER BY VeikkausNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (85)
+in /Projects/Euro2012/protected/controllers/SiteController.php (42)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 12:52:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY VeikkausNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Veikkaus` `t` WHERE ORDER BY VeikkausNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(85): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(42): SiteController->getAllBets()
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:01:39 [error] [php] Invalid argument supplied for foreach() (/Projects/yii/framework/web/helpers/CHtml.php:1847)
+Stack trace:
+#0 /Projects/yii/framework/web/CBaseController.php(127): require()
+#1 /Projects/yii/framework/web/CBaseController.php(96): SiteController->renderInternal()
+#2 /Projects/yii/framework/web/CController.php(870): SiteController->renderFile()
+#3 /Projects/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(62): SiteController->render()
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /Projects/yii/framework/web/CController.php(287): SiteController->runAction()
+#8 /Projects/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#9 /Projects/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CWebApplication->run()
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+in /Projects/Euro2012/protected/views/site/leaveBet.php (43)
+in /Projects/Euro2012/protected/controllers/SiteController.php (62)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:05:33 [error] [php] Invalid argument supplied for foreach() (/Projects/yii/framework/web/helpers/CHtml.php:1847)
+Stack trace:
+#0 /Projects/yii/framework/web/CBaseController.php(127): require()
+#1 /Projects/yii/framework/web/CBaseController.php(96): SiteController->renderInternal()
+#2 /Projects/yii/framework/web/CController.php(870): SiteController->renderFile()
+#3 /Projects/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(64): SiteController->render()
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /Projects/yii/framework/web/CController.php(287): SiteController->runAction()
+#8 /Projects/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#9 /Projects/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CWebApplication->run()
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+in /Projects/Euro2012/protected/views/site/leaveBet.php (43)
+in /Projects/Euro2012/protected/controllers/SiteController.php (64)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:05:34 [error] [php] Invalid argument supplied for foreach() (/Projects/yii/framework/web/helpers/CHtml.php:1847)
+Stack trace:
+#0 /Projects/yii/framework/web/CBaseController.php(127): require()
+#1 /Projects/yii/framework/web/CBaseController.php(96): SiteController->renderInternal()
+#2 /Projects/yii/framework/web/CController.php(870): SiteController->renderFile()
+#3 /Projects/yii/framework/web/CController.php(783): SiteController->renderPartial()
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(64): SiteController->render()
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /Projects/yii/framework/web/CController.php(287): SiteController->runAction()
+#8 /Projects/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#9 /Projects/yii/framework/web/CWebApplication.php(276): SiteController->run()
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CWebApplication->run()
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+in /Projects/Euro2012/protected/views/site/leaveBet.php (43)
+in /Projects/Euro2012/protected/controllers/SiteController.php (64)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:06:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (84)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:06:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(84): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getDropDownListForGroup(false)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:08:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (82)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:08:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(82): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getDropDownListForGroup(false)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:09:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (82)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:09:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(82): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getDropDownListForGroup(false)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:09:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (82)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:09:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(82): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getDropDownListForGroup(false)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:09:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (82)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:09:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(82): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getDropDownListForGroup(false)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:09:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (82)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+in /Projects/Euro2012/index.php (13)
+2012/05/17 13:09:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(82): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getDropDownListForGroup(false)
+#5 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#6 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#10 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#11 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /Projects/Euro2012/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
+2012/05/17 13:09:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC.
+in /Projects/Euro2012/protected/controllers/SiteController.php (82)
+in /Projects/Euro2012/protected/controllers/SiteController.php (68)
+in /Projects/Euro2012/protected/controllers/SiteController.php (47)
+2012/05/17 13:09:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY MaaNimi ASC' at line 1. The SQL statement executed was: SELECT * FROM `Joukkue` `t` WHERE LohkoID =  ORDER BY MaaNimi ASC' in /Projects/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Projects/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Projects/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Projects/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Projects/Euro2012/protected/controllers/SiteController.php(82): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /Projects/Euro2012/protected/controllers/SiteController.php(68): SiteController->getDropDownListForGroup(false)
+#5 /Projects/Euro2012/protected/controllers/SiteController.php(47): SiteController->getAllGroups()
+#6 /Projects/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLeaveBet()
+#7 /Projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Projects/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('leaveBet')
+#11 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/leaveBet')
+#12 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Projects/Euro2012/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
+HTTP_REFERER=http://localhost/Euro2012/index.php
+---
