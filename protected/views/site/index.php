@@ -13,25 +13,32 @@
 
 		  <div class="row-fluid">
 			<div class="span6">
-			50%
+			
+			<p>Tervetuloa jalkapallon 2012 EM-kisojen kaveriporukka-kisaan! Voit 
+			<a href="index.php?r=site/leaveBet">osallistua</a> kaveriporukkasi kisaan
+			ja <a href="index.php?r=site/showBet">seurata pistetilannetta</a>. 
+			Pistetilanne pyritään päivittämään mahdollisimman nopeasti aina otteluiden jälkeen.
+			Voit myös <a href="index.php?r=veikkausController/create">luoda oman kaveriporukan</a> ja
+			pyytää kavereitasi osallistumaan kisaan.</p>
+			<br/>
+			Kisassa veikataan lohkojen voittaja ja kakkonen sekä mitalikolmikko. Kisoissa ei pelata pronssiottelua joten
+			kolmannelle sijalle lasketaan sijoittuneeksi molemmat välierissä hävinneet joukkueet.
+			<br/><br/>
+			Pisteitä saa seuraavasti:
+			<ol>
+				<li>Turnauksen voittaja oikein = 5 pistettä</li>
+				<li>Turnauksen kakkonen oikein = 3 pistettä</li>
+				<li>Turnauksen kolmonen/nelonen oikein = 2 pistettä</li>
+				<li>Mitaleille veikattu joukkue pelaa välierissä muttei sijoitu veikatulle sijalla = 2 pistettä</li>
+				<li>Alkulohkon voittaja oikein = 3 pistettä</li>
+				<li>Alkulohkon kakkonen oikein = 2 pistettä</li>
+				<li>Joukkue pääsee jatkoon eri sijalta kuin veikkattu (ykköseksi veikattu onkin kakkonen tai päinvastoin) = 1 piste</li>
+
+			</ol> 
+			
 			</div><!--/span6-->
 			<div class="span6">
-			50%
-			</div><!--/span6-->
-		  </div><!--/row-->
-
-		  <div class="row-fluid">
-			<div class="span3">
-			25%
-			</div><!--/span6-->
-			<div class="span3">
-			25%
-			</div><!--/span6-->
-			<div class="span3">
-			25%
-			</div><!--/span6-->
-			<div class="span3">
-			25%
+				<img src="images/soccer_ball_on_fire.jpg"/>
 			</div><!--/span6-->
 		  </div><!--/row-->
 		  

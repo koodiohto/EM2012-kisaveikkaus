@@ -20,7 +20,7 @@
 </table>
 
 <br/>
-<p><b>Valitse seuraavaksi kunkin lohkon voittaja ja kakkonen:</b></p>
+<p><b>Valitse seuraavaksi kunkin lohkon voittaja ja kakkonen (samaa joukkuetta ei voi pelata molemille sijoille):</b></p>
 
 <table>
 <tr><th>Lohko A</th><th>Lohko B</th><th>Lohko C</th><th>Lohko D</th></tr>
@@ -39,7 +39,7 @@
 </table>
 
 <br/>
-<p><b>Valitse lopuksi koko turnauksen mitalikolmikko:</b></p>
+<p><b>Valitse lopuksi koko turnauksen mitalikolmikko (pitää olla kolme eri joukkuetta):</b></p>
 <table>
 <tr><th>Ykkönen</th><th>Kakkonen</th><th>Kolmonen</th></tr>
 <tr>

@@ -11,7 +11,7 @@
 <br/>
 <br/>
 <table>
-<tr><th>Veikkaaja</th><th>1.</th><th>2.</th><th>3.</th><th>Lohko A</th><th>Lohko B</th><th>Lohko C</th><th>Lohko D</th><th>Pisteet</th></tr>
+<tr><th>Veikkaaja</th><th>1.</th><th>2.</th><th>3./4.</th><th>Lohko A</th><th>Lohko B</th><th>Lohko C</th><th>Lohko D</th><th>Pisteet</th></tr>
 <?php foreach($rivit as $rivi){;?>
 	<tr>
 	<td><?php echo $rivi->veikkaaja->NimiMerkki; ?></td>

@@ -37,7 +37,7 @@
 	  <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="#">Houston EM-2012 kisaveikkaus</a>
+          <a class="brand" href="index.php">Houston EM-2012 kisaveikkaus</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="index.php?r=site/leaveBet">Osallistu veikkaukseen</a></li>
@@ -50,8 +50,8 @@
     </div>
 
 	<?php echo $content; ?>
-	<div class="footer">
-		Copyright Ohto Rainio, Houston Inc. 2012
+	<div id="footer">
+		<a href="http://www.houston-inc.com"><img src="images/Houston_logo_250_250.png" width="50" height="50"/> <i>Ohto Rainio</i> </a>
 	</div>
 
 </div><!-- page -->
@@ -60,7 +60,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <!--<script src="bootstrap/js/bootstrap-transition.js"></script>
     <script src="bootstrap/js/bootstrap-alert.js"></script>
     <script src="bootstrap/js/bootstrap-modal.js"></script>
     <script src="bootstrap/js/bootstrap-dropdown.js"></script>
@@ -71,7 +71,7 @@
     <script src="bootstrap/js/bootstrap-button.js"></script>
     <script src="bootstrap/js/bootstrap-collapse.js"></script>
     <script src="bootstrap/js/bootstrap-carousel.js"></script>
-    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>-->
 
 </body>
 </html>
