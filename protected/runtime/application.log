@@ -723,3 +723,134 @@ REQUEST_URI=/Euro2012/index.php?r=site/leaveBet
 in /Projects/Euro2012/protected/views/site/showBet.php (15)
 in /Projects/Euro2012/protected/controllers/SiteController.php (78)
 in /Projects/Euro2012/index.php (13)
+2012/06/03 11:08:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Projects/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#1 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Projects/Euro2012/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Euro2012/index.php?r=gii
+---
+2012/06/03 11:08:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Projects/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#1 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Projects/Euro2012/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Euro2012/index.php?r=gii
+---
+2012/06/03 11:12:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+HTTP_REFERER=http://localhost/Euro2012/index.php?r=voittajaTulos
+---
+2012/06/03 11:12:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+HTTP_REFERER=http://localhost/Euro2012/index.php?r=lohkoTulos
+---
+2012/06/03 11:13:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+---
+2012/06/03 11:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+---
+2012/06/03 11:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+HTTP_REFERER=http://localhost/Euro2012/index.php?r=lohkoTulos/view&id=1
+---
+2012/06/03 11:17:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+HTTP_REFERER=http://localhost/Euro2012/index.php?r=lohkoTulos/view&id=1
+---
+2012/06/03 11:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+---
+2012/06/03 11:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+---
+2012/06/03 11:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+---
+2012/06/03 11:24:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+---
+2012/06/03 11:25:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Projects/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Projects/yii/framework/web/CController.php(271): CController->missingAction('login')
+#1 /Projects/yii/framework/web/CWebApplication.php(276): CController->run('login')
+#2 /Projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 /Projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Projects/Euro2012/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Euro2012/index.php?r=site/login
+HTTP_REFERER=http://localhost/Euro2012/index.php?r=voittajaTulos/admin
+---

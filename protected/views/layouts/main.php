@@ -50,10 +50,12 @@
     </div>
 
 	<?php echo $content; ?>
+	<?php if (!strpos($_SERVER["REQUEST_URI"], 'r=veikkausController/create')){?>
 	<div id="footer">
 		<a href="http://www.houston-inc.com"><img src="images/Houston_logo_250_250.png" width="50" height="50"/> <i>Ohto Rainio</i> </a>
 		<br/>Sivusto on tehty rehtiin kisailuun ilman rahapanoksia. Sivua ei ole tarkoitettu vedonlyöntiin.
 	</div>
+	<?php }?>
 
 </div><!-- page -->
 
