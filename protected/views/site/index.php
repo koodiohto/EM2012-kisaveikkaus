@@ -36,6 +36,8 @@
 
 			</ol> 
 			
+			<h3><a href="index.php?r=site/leaveBet">Sitten vaan kisaamaan!</a></h3>
+			
 			</div><!--/span6-->
 			<div class="span6">
 				<img src="images/soccer_ball_on_fire.jpg"/>
