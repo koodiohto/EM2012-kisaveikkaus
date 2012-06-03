@@ -1,3 +1,6 @@
+<div class="alert-error">
+	<p><?php echo $error;?></p>
+</div>
 <div class="form">
 	<p><b>Ole hyvä ja valitse veikkaus johon haluat osallistua:</b></p>
 <?php echo CHtml::beginForm(); ?>

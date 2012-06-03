@@ -32,6 +32,26 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
+	public function actionShowBet()
+	{
+		$veikkaus=$this->getAllBets();
+		
+		$veikkausValinta = 1;
+		if(isset($_POST['veikkaus'])){
+			$veikkausValinta = $_POST['veikkaus'];
+		}
+		
+		if(isset($_POST['nimimerkki'])){
+			$nimimerkki = $_POST['nimimerkki'];
+		}
+		
+		$veikkausManager = new VeikkausManager;
+		$rivit = $veikkausManager->getAllBets($veikkausValinta);
+		$countryCodeToId = $veikkausManager->getIdToCountryCodeMap();
+		$this->render('showBet', array('veikkaus'=>$veikkaus, 'veikkausValinta'=>$veikkausValinta, 
+			'rivit'=>$rivit, 'idToCodes'=>$countryCodeToId, 'nimimerkki'=>$nimimerkki));
+	}	
+	
 	public function actionLeaveBet()
 	{
 	    // retrieve items to be updated in a batch mode
@@ -45,30 +65,52 @@ class SiteController extends Controller
 		$lohkoC = $this->getDropDownListForGroup(3);
 		$lohkoD = $this->getDropDownListForGroup(4);
 		$kaikkiJoukkueet = $this->getAllGroups();
+		$error = "";
 		
-		
-
-	    if(isset($_POST['Veikkaaja_Nimi']) && (isset($_POST['Veikkaaja_NimiMerkki'])) && 
-	    	isset($_POST['Veikkaaja_SahkoPosti']) && isset($_POST['lohkoA1']) && isset($_POST['lohkoB1'])
-			&& isset($_POST['lohkoC1']) && isset($_POST['lohkoD1']) && isset($_POST['lohkoA2']) && isset($_POST['lohkoB2'])
-			&& isset($_POST['lohkoC2']) && isset($_POST['lohkoD2']))
-	    {
-	    	echo "LohkoVeikkaus löytyy";
+		if(isset($_POST['Veikkaaja']['Nimi']) && Veikkaaja::model()->findByAttributes(array('NimiMerkki'=>$_POST['Veikkaaja']['NimiMerkki']))){
+			$error = "Antamasi nimimerkki on jo käytössä.";
+		}else if(isset($_POST['Veikkaaja']['Nimi']) && $error === "" && Veikkaaja::model()->findByAttributes(array('SahkoPosti'=>$_POST['Veikkaaja']['SahkoPosti']))){
+			$error = "Antamallassi sähköpostilla on jo rekisteröity veikkaus.";
+		}else if($this->validateVeikkausInput()){
+	    	$veikkausManager = new VeikkausManager;
+			$veikkaajap = $veikkausManager->leaveBet($_POST);
+			//echo "nimi: ".$veikkaaja->Nimi." getErrors: ".print_r($veikkaajap->getErrors());
+			$rivit = $veikkausManager->getAllBets($_POST['veikkaus']);
+			$countryCodeToId = $veikkausManager->getIdToCountryCodeMap();
+			$this->render('showBet', array('rivit'=>$rivit, 'idToCodes'=>$countryCodeToId, 'veikkaus'=>$_POST['veikkaus'], 'nimimerkki'=>$_POST['Veikkaaja']['NimiMerkki']));
 			return;
-	        $valid=true;
-	        foreach($lohkoVeikkaus as $i=>$item)
-	        {
-	            if(isset($_POST['lohkoA1'][$i]))
-	                $item->attributes=$_POST['lohkoA1'][$i];
-	            $valid=$item->validate() && $valid;
-	        }
-	        if($valid) {} // all items are valid, do something
-	    }
+	    }else if(isset($_POST['Veikkaaja']['Nimi'])){
+			$error = "Jättämääsi veikkausta ei voitu hyväksyä. Ole hyvä ja täytä kaikki kentät sekä valitse lohkojen järjestys ja mitalikolmikko. Huomioi että 
+			lohkon voittaja ja kakkonen ei voi olla sama joukkue. Myös mitalijoukkueiden täytyy olla eri joukkueita 
+			keskenään.";
+		}
 	    // displays the view to collect tabular input
 	    $this->render('leaveBet',array('veikkaus'=>$veikkaus, 'veikkaaja'=>$veikkaaja, 'lohkoA'=>$lohkoA, 'lohkoB'=>$lohkoB, 
-			'lohkoC'=>$lohkoC, 'lohkoD'=>$lohkoD, 'kaikkiJoukkueet'=>$kaikkiJoukkueet));
+			'lohkoC'=>$lohkoC, 'lohkoD'=>$lohkoD, 'kaikkiJoukkueet'=>$kaikkiJoukkueet, 'error'=>$error));
 	}
 
+	/**
+	 * Check that all bets are entered and that group firsts and seconds are not the same country and the medal winners
+	 * are not the same country.
+	 */
+	private function validateVeikkausInput(){
+		return $this->issetAndNotNull($_POST['veikkaus']) && $this->issetAndNotNull($_POST['Veikkaaja']['Nimi']) && ($this->issetAndNotNull($_POST['Veikkaaja']['NimiMerkki'])) && 
+	    	$this->issetAndNotNull($_POST['Veikkaaja']['SahkoPosti']) && $this->issetAndNotNull($_POST['lohkoA1']) && 
+	    	$this->issetAndNotNull($_POST['lohkoB1']) && $this->issetAndNotNull($_POST['lohkoC1']) 
+	    	&& $this->issetAndNotNull($_POST['lohkoD1']) && $this->issetAndNotNull($_POST['lohkoA2']) 
+	    	&& $this->issetAndNotNull($_POST['lohkoB2']) && $this->issetAndNotNull($_POST['lohkoC2']) && 
+	    	$this->issetAndNotNull($_POST['lohkoD2']) && $this->issetAndNotNull($_POST['Voittaja']) && 
+	    	$this->issetAndNotNull($_POST['Kakkonen']) && $this->issetAndNotNull($_POST['Kolmonen']) && 
+	    	$_POST['lohkoA1'] != $_POST['lohkoA2'] && $_POST['lohkoB1'] != $_POST['lohkoB2']  && 
+	    	$_POST['lohkoC1'] != $_POST['lohkoC2']  && $_POST['lohkoD1'] != $_POST['lohkoD2'] 
+			&& $_POST['Voittaja'] != $_POST['Kakkonen'] && $_POST['Voittaja'] != $_POST['Kolmonen'] &&
+			$_POST['Kakkonen'] != $_POST['Kolmonen'];		
+	}
+	
+	private function issetAndNotNull($var){
+		return isset($var) && !empty($var);
+	}
+	
 	private function getAllGroups(){
 		return $this->getDropDownListForGroup(false);
 	}
@@ -120,58 +162,4 @@ class SiteController extends Controller
 	    }
 	}
 
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$headers="From: {$model->email}\r\nReply-To: {$model->email}";
-				mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
 }

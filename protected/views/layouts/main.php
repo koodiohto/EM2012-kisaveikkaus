@@ -40,8 +40,9 @@
           <a class="brand" href="#">Houston EM-2012 kisaveikkaus</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.php?r=site/leaveBet">Jätä veikkaus</a></li>
-              <li><a href="index.php?r=site/results">Tulokset</a></li>
+              <li><a href="index.php?r=site/leaveBet">Osallistu veikkaukseen</a></li>
+              <li><a href="index.php?r=site/showBet">Veikkaustilanne</a></li>
+              <li><a href="index.php?r=veikkausController/create">Luo oma veikkausporukka</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -49,9 +50,9 @@
     </div>
 
 	<?php echo $content; ?>
-	<footer>
+	<div class="footer">
 		Copyright Ohto Rainio, Houston Inc. 2012
-	</footer>
+	</div>
 
 </div><!-- page -->
 

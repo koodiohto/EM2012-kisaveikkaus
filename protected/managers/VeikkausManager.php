@@ -66,4 +66,38 @@ class VeikkausManager{
 		$kolmonen->save();
 	}
 	
+	/**
+	 * Palauta kaikki veikkaukset kaikilta veikkaajilta tietylle veikkausporukalle
+	 */
+	public function getAllBets($veikkausID){
+		$veikkaajat = Veikkaaja::model()->findAll(array('order'=>'NimiMerkki'));
+		$veikkausRivit = array();
+		$groupIdToCountryCode = $this->getIdToCountryCodeMap();
+		foreach ($veikkaajat as $veikkaaja){
+			$lohkoVeikkaukset = LohkoVeikkaus::model()->
+				findAll(array("condition"=>"VeikkaajaID=".$veikkaaja->VeikkaajaID." AND VeikkausID=".$veikkausID, "order"=>"LohkoVeikkausID"));
+			if($lohkoVeikkaukset == null || empty($lohkoVeikkaukset)){//no bets for this veikkaus for this veikkaaja.
+				continue;
+			}
+			$voittajaVeikkaukset = VoittajaVeikkaus::model()->
+				findAll(array("condition"=>"VeikkaajaID=".$veikkaaja->VeikkaajaID." AND VeikkausID=".$veikkausID, "order"=>"LoppuSijoitusVeikkaus"));
+		$veikkausRivi = new VeikkausRivi;
+		$veikkausRivi->veikkaaja = $veikkaaja;
+		$veikkausRivi->lohkoVeikkaus = $lohkoVeikkaukset;
+		$veikkausRivi->voittajaVeikkaus = $voittajaVeikkaukset;
+		array_push($veikkausRivit, $veikkausRivi);	
+		}
+		
+		return $veikkausRivit;
+	}
+	
+	public function getIdToCountryCodeMap(){
+		$groupIdToCountryCode = array();
+		$groups = Joukkue::model()->findAll();
+		foreach ($groups as $group){
+			$groupIdToCountryCode[$group->JoukkueID]=$group->MaaTunnus;		
+		}
+		return $groupIdToCountryCode;
+	}
+	
 }
