@@ -4,6 +4,7 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
 require_once( dirname(__FILE__) . '/../managers/VeikkausManager.php');
+require_once( dirname(__FILE__) . '/../managers/PointsManager.php');
 require_once( dirname(__FILE__) . '/../models/VeikkausRivi.php');
 
 

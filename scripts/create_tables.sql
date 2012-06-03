@@ -39,6 +39,9 @@ PRIMARY KEY (VeikkausID),
 UNIQUE(VeikkausNimi)
 );
 
+ALTER TABLE Veikkaus
+ ADD Salasana VARCHAR(60);
+
 CREATE TABLE LohkoVeikkaus (LohkoVeikkausID INTEGER NOT NULL AUTO_INCREMENT,
 LohkoSijoitusVeikkaus Integer NOT NULL,
 JoukkueID Integer NOT NULL,

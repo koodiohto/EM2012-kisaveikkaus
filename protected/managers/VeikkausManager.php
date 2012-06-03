@@ -85,6 +85,9 @@ class VeikkausManager{
 		$veikkausRivi->veikkaaja = $veikkaaja;
 		$veikkausRivi->lohkoVeikkaus = $lohkoVeikkaukset;
 		$veikkausRivi->voittajaVeikkaus = $voittajaVeikkaukset;
+		$pointsManager = new PointsManager;
+		$veikkausRivi->pisteet = $pointsManager->calculatePoints($veikkausRivi);
+		
 		array_push($veikkausRivit, $veikkausRivi);	
 		}
 		

@@ -9,5 +9,6 @@ class VeikkausRivi {
 	var $veikkaaja;
 	var $lohkoVeikkaus = array();
 	var $voittajaVeikkaus = array();
+	var $pisteet;
 }
 

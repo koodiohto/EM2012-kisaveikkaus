@@ -6,6 +6,7 @@ $this->breadcrumbs=array(
 
 ?>
 
-<h1>Anna kaveriporukallesi nimi:</h1>
+<h1>Luo oma kaveriporukka</h1>
+<br/>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

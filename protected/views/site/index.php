@@ -27,10 +27,10 @@
 			<br/><br/>
 			Pisteitä saa seuraavasti:
 			<ol>
-				<li>Turnauksen voittaja oikein = 5 pistettä</li>
-				<li>Turnauksen kakkonen oikein = 3 pistettä</li>
-				<li>Turnauksen kolmonen/nelonen oikein = 2 pistettä</li>
-				<li>Mitaleille veikattu joukkue pelaa välierissä muttei sijoitu veikatulle sijalla = 2 pistettä</li>
+				<li>Turnauksen voittaja oikein = 8 pistettä</li>
+				<li>Turnauksen kakkonen oikein = 5 pistettä</li>
+				<li>Turnauksen kolmonen/nelonen oikein = 4 pistettä</li>
+				<li>Mitaleille veikattu joukkue pelaa välierissä muttei sijoitu veikatulle sijalla = 4 pistettä</li>
 				<li>Alkulohkon voittaja oikein = 3 pistettä</li>
 				<li>Alkulohkon kakkonen oikein = 2 pistettä</li>
 				<li>Joukkue pääsee jatkoon eri sijalta kuin veikkattu (ykköseksi veikattu onkin kakkonen tai päinvastoin) = 1 piste</li>

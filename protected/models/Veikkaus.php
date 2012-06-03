@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'Veikkaus':
  * @property integer $VeikkausID
  * @property string $VeikkausNimi
+ * @property string $Salasana
  */
 class Veikkaus extends CActiveRecord
 {
@@ -37,9 +38,10 @@ class Veikkaus extends CActiveRecord
 		return array(
 			array('VeikkausNimi', 'required'),
 			array('VeikkausNimi', 'length', 'max'=>40),
+			array('Salasana', 'length', 'max'=>60),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('VeikkausID, VeikkausNimi', 'safe', 'on'=>'search'),
+			array('VeikkausID, VeikkausNimi, Salasana', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +63,8 @@ class Veikkaus extends CActiveRecord
 	{
 		return array(
 			'VeikkausID' => 'Veikkaus',
-			'VeikkausNimi' => 'Veikkaus Nimi',
+			'VeikkausNimi' => 'Anna kaveriporukallesi nimi',
+			'Salasana' => 'Anna salasana jolla kaveriporukkasi kisaan voi liittyä',
 		);
 	}
 
@@ -78,6 +81,7 @@ class Veikkaus extends CActiveRecord
 
 		$criteria->compare('VeikkausID',$this->VeikkausID);
 		$criteria->compare('VeikkausNimi',$this->VeikkausNimi,true);
+		$criteria->compare('Salasana',$this->Salasana,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

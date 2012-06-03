@@ -68,6 +68,8 @@ class SiteController extends Controller
 			$lohkoC = $this->getDropDownListForGroup(3);
 			$lohkoD = $this->getDropDownListForGroup(4);
 			$kaikkiJoukkueet = $this->getAllGroups();
+			$salasana="salasana";
+			
 			$error = "";
 			
 			if(isset($_POST['Veikkaaja']['Nimi']) && Veikkaaja::model()->findByAttributes(array('NimiMerkki'=>$_POST['Veikkaaja']['NimiMerkki']))){
@@ -75,13 +77,20 @@ class SiteController extends Controller
 			}else if(isset($_POST['Veikkaaja']['Nimi']) && $error === "" && Veikkaaja::model()->findByAttributes(array('SahkoPosti'=>$_POST['Veikkaaja']['SahkoPosti']))){
 				$error = "Antamallassi sähköpostilla on jo rekisteröity veikkaus.";
 			}else if($this->validateVeikkausInput()){
-		    	$veikkausManager = new VeikkausManager;
-				$veikkaajap = $veikkausManager->leaveBet($_POST);
-				//echo "nimi: ".$veikkaaja->Nimi." getErrors: ".print_r($veikkaajap->getErrors());
-				$rivit = $veikkausManager->getAllBets($_POST['veikkaus']);
-				$countryCodeToId = $veikkausManager->getIdToCountryCodeMap();
-				$this->render('showBet', array('rivit'=>$rivit, 'idToCodes'=>$countryCodeToId, 'veikkaus'=>$_POST['veikkaus'], 'nimimerkki'=>$_POST['Veikkaaja']['NimiMerkki']));
-				return;
+				
+				$selectedVeikkaus = Veikkaus::model()->find(array("condition"=>"VeikkausID='".$_POST['veikkaus']."'"));
+				//echo "salasana: ".$selectedVeikkaus->Salasana. " postin salasana: ". $_POST['salasana'];
+				//return;
+				if($selectedVeikkaus->Salasana != $_POST['salasana']){
+					$error = "Antamasi salasana veikkaukselle oli väärä. Pyydä oikea salasana kaveriporukan perustajalta.";
+				}else{
+			    	$veikkausManager = new VeikkausManager;
+					$veikkaajap = $veikkausManager->leaveBet($_POST);
+					$rivit = $veikkausManager->getAllBets($_POST['veikkaus']);
+					$countryCodeToId = $veikkausManager->getIdToCountryCodeMap();
+					$this->render('showBet', array('rivit'=>$rivit, 'idToCodes'=>$countryCodeToId, 'veikkaus'=>$_POST['veikkaus'], 'nimimerkki'=>$_POST['Veikkaaja']['NimiMerkki']));
+					return;
+				}
 		    }else if(isset($_POST['Veikkaaja']['Nimi'])){
 				$error = "Jättämääsi veikkausta ei voitu hyväksyä. Ole hyvä ja täytä kaikki kentät sekä valitse lohkojen järjestys ja mitalikolmikko. Huomioi että 
 				lohkon voittaja ja kakkonen ei voi olla sama joukkue. Myös mitalijoukkueiden täytyy olla eri joukkueita 
@@ -89,7 +98,7 @@ class SiteController extends Controller
 			}
 		    // displays the view to collect tabular input
 		    $this->render('leaveBet',array('veikkaus'=>$veikkaus, 'veikkaaja'=>$veikkaaja, 'lohkoA'=>$lohkoA, 'lohkoB'=>$lohkoB, 
-				'lohkoC'=>$lohkoC, 'lohkoD'=>$lohkoD, 'kaikkiJoukkueet'=>$kaikkiJoukkueet, 'error'=>$error));
+				'lohkoC'=>$lohkoC, 'lohkoD'=>$lohkoD, 'kaikkiJoukkueet'=>$kaikkiJoukkueet, 'salasana'=>$salasana, 'error'=>$error));
 		}else {
 			$this->render('error');
 		}

@@ -15,6 +15,11 @@
 		<?php echo $form->textField($model,'VeikkausNimi',array('size'=>40,'maxlength'=>40)); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'Salasana'); ?>
+		<?php echo $form->textField($model,'Salasana',array('size'=>60,'maxlength'=>60)); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

@@ -8,5 +8,9 @@
 	<?php echo CHtml::encode($data->VeikkausNimi); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Salasana')); ?>:</b>
+	<?php echo CHtml::encode($data->Salasana); ?>
+	<br />
+
 
 </div>

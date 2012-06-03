@@ -2,10 +2,16 @@
 	<p><?php echo $error;?></p>
 </div>
 <div class="form">
-	<p><b>Ole hyvä ja valitse veikkaus johon haluat osallistua:</b></p>
-<?php echo CHtml::beginForm(); ?>
-<?php echo CHtml::dropDownList('veikkaus', $veikkausValinta, $veikkaus, array('empty' => 'Valitse veikkaus'));?>
+	<p><b>Ole hyvä ja valitse veikkaus johon haluat osallistua. Syötä myös veikkauksen perustajan antama salasana.</b></p>
+	<table>
+	<tr><th>Veikkaus</th><th>Veikkauksen salasana</th><th></th></tr>
 
+<?php echo CHtml::beginForm(); ?>
+<td><?php echo CHtml::dropDownList('veikkaus', $veikkausValinta, $veikkaus, array('empty' => 'Valitse veikkaus'));?></td>
+<td><?php echo CHtml::textField($salasana,""); ?></td>
+<td width="30%"></td>
+
+</table>
 <br/>
 <br/>
 <p><b>Täytä seuraavaksi yhteystietosi:</b></p>
