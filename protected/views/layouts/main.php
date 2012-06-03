@@ -52,6 +52,7 @@
 	<?php echo $content; ?>
 	<div id="footer">
 		<a href="http://www.houston-inc.com"><img src="images/Houston_logo_250_250.png" width="50" height="50"/> <i>Ohto Rainio</i> </a>
+		<br/>Sivusto on tehty rehtiin kisailuun ilman rahapanoksia. Sivua ei ole tarkoitettu vedonlyöntiin.
 	</div>
 
 </div><!-- page -->
@@ -59,8 +60,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="bootstrap/js/jquery.js"></script>
-    <!--<script src="bootstrap/js/bootstrap-transition.js"></script>
+    <!--<script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
     <script src="bootstrap/js/bootstrap-alert.js"></script>
     <script src="bootstrap/js/bootstrap-modal.js"></script>
     <script src="bootstrap/js/bootstrap-dropdown.js"></script>

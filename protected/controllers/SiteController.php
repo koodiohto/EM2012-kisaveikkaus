@@ -54,39 +54,45 @@ class SiteController extends Controller
 	
 	public function actionLeaveBet()
 	{
-	    // retrieve items to be updated in a batch mode
-	    // assuming each item is of model class 'Item'
-	    $veikkaaja=new Veikkaaja;
-		$lohkoVeikkaus[]=new LohkoVeikkaus;
-		$voittajaVeikkaus[]=new VoittajaVeikkaus;
-		$veikkaus=$this->getAllBets();
-		$lohkoA = $this->getDropDownListForGroup(1);//CHTML-list
-		$lohkoB = $this->getDropDownListForGroup(2);
-		$lohkoC = $this->getDropDownListForGroup(3);
-		$lohkoD = $this->getDropDownListForGroup(4);
-		$kaikkiJoukkueet = $this->getAllGroups();
-		$error = "";
 		
-		if(isset($_POST['Veikkaaja']['Nimi']) && Veikkaaja::model()->findByAttributes(array('NimiMerkki'=>$_POST['Veikkaaja']['NimiMerkki']))){
-			$error = "Antamasi nimimerkki on jo käytössä.";
-		}else if(isset($_POST['Veikkaaja']['Nimi']) && $error === "" && Veikkaaja::model()->findByAttributes(array('SahkoPosti'=>$_POST['Veikkaaja']['SahkoPosti']))){
-			$error = "Antamallassi sähköpostilla on jo rekisteröity veikkaus.";
-		}else if($this->validateVeikkausInput()){
-	    	$veikkausManager = new VeikkausManager;
-			$veikkaajap = $veikkausManager->leaveBet($_POST);
-			//echo "nimi: ".$veikkaaja->Nimi." getErrors: ".print_r($veikkaajap->getErrors());
-			$rivit = $veikkausManager->getAllBets($_POST['veikkaus']);
-			$countryCodeToId = $veikkausManager->getIdToCountryCodeMap();
-			$this->render('showBet', array('rivit'=>$rivit, 'idToCodes'=>$countryCodeToId, 'veikkaus'=>$_POST['veikkaus'], 'nimimerkki'=>$_POST['Veikkaaja']['NimiMerkki']));
-			return;
-	    }else if(isset($_POST['Veikkaaja']['Nimi'])){
-			$error = "Jättämääsi veikkausta ei voitu hyväksyä. Ole hyvä ja täytä kaikki kentät sekä valitse lohkojen järjestys ja mitalikolmikko. Huomioi että 
-			lohkon voittaja ja kakkonen ei voi olla sama joukkue. Myös mitalijoukkueiden täytyy olla eri joukkueita 
-			keskenään.";
+		$em_start_date = "2012-06-08-16";
+		if(date("Y-m-d-H") < $em_start_date){
+		    // retrieve items to be updated in a batch mode
+		    // assuming each item is of model class 'Item'
+		    $veikkaaja=new Veikkaaja;
+			$lohkoVeikkaus[]=new LohkoVeikkaus;
+			$voittajaVeikkaus[]=new VoittajaVeikkaus;
+			$veikkaus=$this->getAllBets();
+			$lohkoA = $this->getDropDownListForGroup(1);//CHTML-list
+			$lohkoB = $this->getDropDownListForGroup(2);
+			$lohkoC = $this->getDropDownListForGroup(3);
+			$lohkoD = $this->getDropDownListForGroup(4);
+			$kaikkiJoukkueet = $this->getAllGroups();
+			$error = "";
+			
+			if(isset($_POST['Veikkaaja']['Nimi']) && Veikkaaja::model()->findByAttributes(array('NimiMerkki'=>$_POST['Veikkaaja']['NimiMerkki']))){
+				$error = "Antamasi nimimerkki on jo käytössä.";
+			}else if(isset($_POST['Veikkaaja']['Nimi']) && $error === "" && Veikkaaja::model()->findByAttributes(array('SahkoPosti'=>$_POST['Veikkaaja']['SahkoPosti']))){
+				$error = "Antamallassi sähköpostilla on jo rekisteröity veikkaus.";
+			}else if($this->validateVeikkausInput()){
+		    	$veikkausManager = new VeikkausManager;
+				$veikkaajap = $veikkausManager->leaveBet($_POST);
+				//echo "nimi: ".$veikkaaja->Nimi." getErrors: ".print_r($veikkaajap->getErrors());
+				$rivit = $veikkausManager->getAllBets($_POST['veikkaus']);
+				$countryCodeToId = $veikkausManager->getIdToCountryCodeMap();
+				$this->render('showBet', array('rivit'=>$rivit, 'idToCodes'=>$countryCodeToId, 'veikkaus'=>$_POST['veikkaus'], 'nimimerkki'=>$_POST['Veikkaaja']['NimiMerkki']));
+				return;
+		    }else if(isset($_POST['Veikkaaja']['Nimi'])){
+				$error = "Jättämääsi veikkausta ei voitu hyväksyä. Ole hyvä ja täytä kaikki kentät sekä valitse lohkojen järjestys ja mitalikolmikko. Huomioi että 
+				lohkon voittaja ja kakkonen ei voi olla sama joukkue. Myös mitalijoukkueiden täytyy olla eri joukkueita 
+				keskenään.";
+			}
+		    // displays the view to collect tabular input
+		    $this->render('leaveBet',array('veikkaus'=>$veikkaus, 'veikkaaja'=>$veikkaaja, 'lohkoA'=>$lohkoA, 'lohkoB'=>$lohkoB, 
+				'lohkoC'=>$lohkoC, 'lohkoD'=>$lohkoD, 'kaikkiJoukkueet'=>$kaikkiJoukkueet, 'error'=>$error));
+		}else {
+			$this->render('error');
 		}
-	    // displays the view to collect tabular input
-	    $this->render('leaveBet',array('veikkaus'=>$veikkaus, 'veikkaaja'=>$veikkaaja, 'lohkoA'=>$lohkoA, 'lohkoB'=>$lohkoB, 
-			'lohkoC'=>$lohkoC, 'lohkoD'=>$lohkoD, 'kaikkiJoukkueet'=>$kaikkiJoukkueet, 'error'=>$error));
 	}
 
 	/**

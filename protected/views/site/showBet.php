@@ -4,9 +4,10 @@
 		<p><b>Kiitos veikkauksen jättämisestä! Alla voit tarkastella jätettyjä veikkauksia.</b></p>	
 	<?php }else{?>
 	<p><b>Ole hyvä ja valitse veikkaus jota haluat tarkastella:</b></p>
-<?//php echo CHtml::beginForm(); ?>
-<?//php echo CHtml::dropDownList('veikkaus', $veikkausValinta, $veikkaus, array('empty' => 'Valitse veikkaus'));?>
-<?//php echo CHtml::endForm(); ?>
+<?php echo CHtml::beginForm(); ?>
+<?php echo CHtml::dropDownList('veikkaus', $veikkausValinta, $veikkaus, array('empty' => 'Valitse veikkaus', 
+	'onChange'=>'this.form.submit()'));?>
+<?php echo CHtml::endForm(); ?>
 <?php }?>
 <br/>
 <br/>

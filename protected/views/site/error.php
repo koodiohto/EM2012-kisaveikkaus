@@ -5,8 +5,6 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h2>Error <?php echo $code; ?></h2>
-
 <div class="error">
-<?php echo CHtml::encode($message); ?>
+EM-kisat ovat jo alkaneet! Veikkauksia ei valitettavasti voida ottaa enää vastaan.
 </div>

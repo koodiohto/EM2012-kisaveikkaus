@@ -22,7 +22,8 @@
 			pyytää kavereitasi osallistumaan kisaan.</p>
 			<br/>
 			Kisassa veikataan lohkojen voittaja ja kakkonen sekä mitalikolmikko. Kisoissa ei pelata pronssiottelua joten
-			kolmannelle sijalle lasketaan sijoittuneeksi molemmat välierissä hävinneet joukkueet.
+			kolmannelle sijalle lasketaan sijoittuneeksi molemmat välierissä hävinneet joukkueet. Kisat alkavat perjantaina
+			8. kesäkuta, joten veikkaukset ennen sitä kiitos!
 			<br/><br/>
 			Pisteitä saa seuraavasti:
 			<ol>
